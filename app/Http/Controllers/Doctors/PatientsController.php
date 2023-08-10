@@ -17,7 +17,12 @@ class PatientsController extends Controller
 
         $patients = DB::table('patients')
             ->leftJoin('details', 'patients.id', '=', 'details.patient_id')
+            ->select('patients.id', 'patients.email', 'patients.fullName', 'patients.patientId', 'patients.created_at', 'details.phone', 'details.gender', 'details.age', 'details.blood_type', 'details.weight', 'details.height')
             ->get();
+
+        //    dd($patients->created_at);
+
+
 
 
         return view('doctors.patients', ['patients' => $patients]);

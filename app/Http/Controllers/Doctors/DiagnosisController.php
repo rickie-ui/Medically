@@ -30,6 +30,7 @@ class DiagnosisController extends Controller
         $patient = DB::table('patients')
             ->leftJoin('details', 'patients.id', '=', 'details.patient_id')
             ->where('patients.id', $id)
+            ->select('patients.id', 'patients.email', 'patients.fullName', 'patients.patientId', 'patients.created_at', 'details.phone', 'details.gender', 'details.age', 'details.blood_type', 'details.weight', 'details.height')
             ->get()
             ->first();
 

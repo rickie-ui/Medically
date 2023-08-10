@@ -16,7 +16,7 @@
                </div>
 
                 <div class=" w-min whitespace-nowrap h-full font-semibold opacity-70 p-4 flex space-x-2 items-center justify-center border-r-2">
-                    <h3 class="opacity-70"><span class="text-xs uppercase"><i class="fa fa-address-book text-purple-600"></i> Last Visit</span>  <br><span>{{date_format(now()->parse($prescribe->created_at ?? ''), 'd.m.Y')}} </span></h3>
+                    <h3 class="opacity-70"><span class="text-xs uppercase"><i class="fa fa-address-book text-purple-600"></i> Last Visit</span>  <br><span>{{date_format(now()->parse($patient->created_at), 'd.m.Y')}} </span></h3>
                </div>
 
                <div class="w-min whitespace-nowrap h-full font-semibold opacity-70 p-4 flex space-x-2 items-center justify-center">

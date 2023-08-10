@@ -27,6 +27,7 @@
                   <tbody>
 
                     @foreach ($patients as $patient)
+
                         
                     <tr class="opacity-60 text-sm font-semibold">
                             <td>
